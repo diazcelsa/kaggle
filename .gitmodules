@@ -1,0 +1,3 @@
+[submodule "telstra"]
+    path = telstra
+    url = https://github.com/diazcelsa/kaggle/telstra
