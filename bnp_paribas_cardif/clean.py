@@ -29,7 +29,16 @@ class NullToNaNTransformer(BaseEstimator, TransformerMixin):
         return X.fillna(np.nan)
 
 
+class ObjtoCatStrtoBinTrans(BaseEstimator, TransformerMixin):
+    def __init__(self,columns=):
+        # define columns
+    
+    def fit(self, X, y=None, **fit_params):
+        # define mapping between strings and numbers
 
+    def transform(self, X, **transform_params):
+        # apply mapping from fit to the data
+        return mapped_X
 
 def objtocat_strtobin_trans(df):
     cols = df.columns
