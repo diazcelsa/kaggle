@@ -12,11 +12,13 @@ import seaborn as sns
 from sklearn import preprocessing
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.preprocessing import Imputer
+from sklearn.base import BaseEstimator
+from sklearn.base import TransformerMixin
 from scipy import stats
 
 
 
-class nulltonan_trans(dataframe):
+class NullToNaNTransformer(BaseEstimator, TransformerMixin):
     def __init__(self):
         pass
 
@@ -27,5 +29,45 @@ class nulltonan_trans(dataframe):
         return X.fillna(np.nan)
 
 
-class nantomedian_trans(dataframe):
+class nantovalue_trans(BaseEstimator, TransformerMixin):
     def __init__(self):
+        pass
+
+    def checkifnan(self):
+        pass
+
+    def fit(self, X, y=None, **fit_params):
+        return self
+
+    def transform(self, X, **transform_params):
+        pass
+
+
+class objtocat_strtobin_trans(BaseEstimator, TransformerMixin):
+    def __init__(self):
+        pass
+
+    def fit(self, X, y=None, **fit_params):
+        pass
+
+    def transform(self, X, **transform_params):
+        pass
+
+
+class cattobin_trans(BaseEstimator, TransformerMixin):
+    def __init__(self):
+        pass
+
+    def fit(self, X, y=None, **fit_params):
+        pass
+
+    def transform(self, X, **transform_params):
+        pass
+
+
+def distnormalvsnonnormal(dicti, dataframe):
+    pass
+
+
+
+
