@@ -15,10 +15,11 @@ from sklearn.preprocessing import Imputer
 from sklearn.base import BaseEstimator
 from sklearn.base import TransformerMixin
 from scipy import stats
+from collections import defaultdict
 
 
 
-class NullToNaNTransformer(BaseEstimator, TransformerMixin):
+class NullToNaNTrans(BaseEstimator, TransformerMixin):
     def __init__(self):
         pass
 
@@ -29,16 +30,85 @@ class NullToNaNTransformer(BaseEstimator, TransformerMixin):
         return X.fillna(np.nan)
 
 
-class ObjtoCatStrtoBinTrans(BaseEstimator, TransformerMixin):
-    def __init__(self,columns=):
-        # define columns
-    
+class ObjtoCatStrtoIntTrans(BaseEstimator, TransformerMixin):
+    def __init__(self, columns=None):
+        if columns == None:
+            self.cols = X.columns
+        else:
+            self.cols = columns 
+
     def fit(self, X, y=None, **fit_params):
         # define mapping between strings and numbers
-
+        self.mapping = []
+        m = 0
+        while m < len(self.cols):
+            X[self.cols[i]] = X[self.cols[i]].astype('category')
+            cats = X[self.cols[i]].dropna().unique()
+            ncat = len(cats)
+            d = {}
+            a = 0
+            while a < len(cats):
+                d[cats[a]] = a+1 
+                a += 1
+            self.mapping[self.cols[i]] = d
+            m += 1
+        
     def transform(self, X, **transform_params):
         # apply mapping from fit to the data
-        return mapped_X
+        X_ = X.copy()
+        m = 0
+        while m < len(self.cols):
+            X_[self.cols[i]] = X_[self.cols[i]].astype('category')
+            val = X_[cols[m]]
+            X_.ix[val, cols[m]] = X_.ix[val, cols[m]].map(lambda x: self.mapping[cols[m]][x])
+            m += 1
+        return X_
+
+
+class DataSpliterTrans(BaseEstimator, TransformerMixin):
+    def __init__(self, columns=None, dtype=None):
+        self.dtype = dtype
+        self.cols = columns
+
+    def fit(self, X, y=None, **fit_params):
+        # select data by datatype (np.int, np.float64, np.object)
+        if self.dtype != None:
+            self.cols = X.loc[:, X.dtypes == self.dtype].columns 
+
+    def transform(self, X, **transform_params):
+        return X.self.cols 
+
+
+def simple_classifier(Classifier):
+    '''
+    Returns an estimator that estimates the return probability of order
+    positions which uses only the information available at the time shipping.
+    '''
+    pipeline = make_pipeline(
+        NullToNaNTrans(),
+        make_union(
+            make_pipeline(
+                DataSpliterTrans(dtype='np.float64'),
+                Imputer(strategy='median')
+            ),
+            make_pipeline(
+                DataSpliterTrans(dtype='np.int'),
+                Imputer(strategy='most_frequent'),
+                preprocessing.OneHotEncoder()
+            ),
+            make_pipeline(
+                DataSpliterTrans(dtype='np.object'),
+                ObjtoCatStrtoIntTrans(),
+                Imputer(strategy='most_frequent'),
+                preprocessing.OneHotEncoder()
+        ),
+        Classifier()
+        )
+    return pipeline
+
+
+
+# Simple functions
 
 def objtocat_strtobin_trans(df):
     cols = df.columns
@@ -80,28 +150,3 @@ def distnormalvsnonnormal(dic, df):
             dic[i] = "normal"
     return dic
 
-
-
-def simple_classifier(Classifier):
-    '''
-    Returns an estimator that estimates the return probability of order
-    positions which uses only the information available at the time shipping.
-    '''
-    pipeline = make_pipeline(
-        NullToNaNTransformer(),
-        make_union(
-            make_pipeline(
-                ColumnExtractor(columns=['a','b']),
-                Imputer(strategy='median')
-            ),
-            make_pipeline(
-                ColumnExtractor(columns=['c']),
-                NaNToValueTransformer(value = 'unkown'),
-                IntCategorizer(),
-                Imputer(strategy='most_frequent'),
-                OneHotEncoder()
-            )
-        ),
-        Classifier()
-        )
-    return pipeline
