@@ -2,8 +2,6 @@
 ################   Clean Data
 ################
 
-
-import warnings; warnings.simplefilter('ignore')
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -14,6 +12,8 @@ from sklearn.preprocessing import OneHotEncoder
 from sklearn.preprocessing import Imputer
 from sklearn.base import BaseEstimator
 from sklearn.base import TransformerMixin
+from sklearn.pipeline import make_pipeline
+from sklearn.pipeline import make_union
 from scipy import stats
 from collections import defaultdict
 
@@ -24,86 +24,105 @@ class NullToNaNTrans(BaseEstimator, TransformerMixin):
         pass
 
     def fit(self, X, y=None, **fit_params):
+        print('NullToNaNTrans fit done.')
         return self
 
     def transform(self, X, **transform_params):
+        print('NullToNaNTrans transform done.')
         return X.fillna(np.nan)
 
 
 class ObjtoCatStrtoIntTrans(BaseEstimator, TransformerMixin):
     def __init__(self, columns=None):
-        if columns == None:
-            self.cols = X.columns
-        else:
             self.cols = columns 
 
     def fit(self, X, y=None, **fit_params):
         # define mapping between strings and numbers
-        self.mapping = []
+        if self.cols == None:
+            self.cols = X.columns
+        self.mapping = defaultdict(list)
+        X_ = X.copy()
         m = 0
         while m < len(self.cols):
-            X[self.cols[i]] = X[self.cols[i]].astype('category')
-            cats = X[self.cols[i]].dropna().unique()
+            X_[self.cols[m]] = X_[self.cols[m]].astype('category')
+            cats = X_[self.cols[m]].dropna().unique()
             ncat = len(cats)
             d = {}
             a = 0
             while a < len(cats):
                 d[cats[a]] = a+1 
                 a += 1
-            self.mapping[self.cols[i]] = d
+            self.mapping[self.cols[m]] = d
             m += 1
+        print('ObjtoCatStrtoIntTrans fit done.')
+        return self
         
     def transform(self, X, **transform_params):
         # apply mapping from fit to the data
         X_ = X.copy()
         m = 0
         while m < len(self.cols):
-            X_[self.cols[i]] = X_[self.cols[i]].astype('category')
-            val = X_[cols[m]]
-            X_.ix[val, cols[m]] = X_.ix[val, cols[m]].map(lambda x: self.mapping[cols[m]][x])
+            val = X_[self.cols[m]].isnull()
+            X_.loc[~val,self.cols[m]] = X_.loc[~val,self.cols[m]].map(lambda x: self.mapping[self.cols[m]][x])
             m += 1
+        print('ObjtoCatStrtoIntTrans transform done.')
         return X_
 
 
 class DataSpliterTrans(BaseEstimator, TransformerMixin):
-    def __init__(self, columns=None, dtype=None):
-        self.dtype = dtype
+    def __init__(self, data=np.int, columns=None):
+        self.dtype = data
         self.cols = columns
 
     def fit(self, X, y=None, **fit_params):
         # select data by datatype (np.int, np.float64, np.object)
-        if self.dtype != None:
-            self.cols = X.loc[:, X.dtypes == self.dtype].columns 
+        if self.dtype != 'np.int':
+            self.cols = X.loc[:, X.dtypes == self.dtype].columns
+        print('DataSpliterTrans fit done.')
+        return self
 
     def transform(self, X, **transform_params):
-        return X.self.cols 
+        X_ = [X[i] for i in self.cols]
+        X_ = DataFrame(X_)
+        X_ = X_.transpose()
+        print('DataSpliterTrans transform done.')
+        return X_
 
+class debugger(BaseEstimator, TransformerMixin):
+    def __init__(self):
+        pass
 
-def simple_classifier(Classifier):
-    '''
-    Returns an estimator that estimates the return probability of order
-    positions which uses only the information available at the time shipping.
-    '''
+    def fit(self, X, y=None, **fit_params):
+        from IPython.core.debugger import Tracer
+        Tracer()()
+        return self
+
+    def transform(self, X, **transform_params):
+        return X
+
+def mypipeline(Classifier):
     pipeline = make_pipeline(
         NullToNaNTrans(),
         make_union(
             make_pipeline(
-                DataSpliterTrans(dtype='np.float64'),
+                DataSpliterTrans(data=np.float64),
                 Imputer(strategy='median')
             ),
             make_pipeline(
-                DataSpliterTrans(dtype='np.int'),
+                DataSpliterTrans(data=np.int),
                 Imputer(strategy='most_frequent'),
                 preprocessing.OneHotEncoder()
             ),
             make_pipeline(
-                DataSpliterTrans(dtype='np.object'),
+                DataSpliterTrans(data=np.object),
                 ObjtoCatStrtoIntTrans(),
                 Imputer(strategy='most_frequent'),
                 preprocessing.OneHotEncoder()
+            ),
         ),
         Classifier()
         )
+    print('pipeline done.')
     return pipeline
 
 
@@ -128,7 +147,7 @@ def ifNaN(df):
         return True
 
 def matrixToDf(matrix, inidata):
-    if inidata = None:
+    if inidata == None:
         newdf = pd.DataFrame(matrix)
     else:
         cols = inidata.columns
