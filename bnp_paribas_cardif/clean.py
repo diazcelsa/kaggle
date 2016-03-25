@@ -65,6 +65,7 @@ class ObjtoCatStrtoIntTrans(BaseEstimator, TransformerMixin):
             val = X_[self.cols[m]].isnull()
             X_.loc[~val,self.cols[m]] = X_.loc[~val,self.cols[m]].map(lambda x: self.mapping[self.cols[m]][x])
             m += 1
+        print(X_.shape)
         print('ObjtoCatStrtoIntTrans transform done.')
         return X_
 
@@ -85,6 +86,7 @@ class DataSpliterTrans(BaseEstimator, TransformerMixin):
         X_ = [X[i] for i in self.cols]
         X_ = DataFrame(X_)
         X_ = X_.transpose()
+        print(X_.shape)
         print('DataSpliterTrans transform done.')
         return X_
 
