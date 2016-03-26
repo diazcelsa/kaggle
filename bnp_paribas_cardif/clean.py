@@ -47,7 +47,7 @@ class ObjtoCatStrtoIntTrans(BaseEstimator, TransformerMixin):
             X_[self.cols[m]] = X_[self.cols[m]].astype('category')
             cats = X_[self.cols[m]].dropna().unique()
             ncat = len(cats)
-            d = {}
+            d = defaultdict(lambda : np.nan)
             a = 0
             while a < len(cats):
                 d[cats[a]] = a+1 
