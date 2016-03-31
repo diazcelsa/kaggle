@@ -171,3 +171,8 @@ def distnormalvsnonnormal(dic, df):
             dic[i] = "normal"
     return dic
 
+
+def debugger(x):
+    from IPython.core.debugger import Tracer
+    return Tracer()()
+

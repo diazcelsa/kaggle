@@ -9,6 +9,7 @@ from pandas import Series, DataFrame
 import seaborn as sns
 from sklearn import preprocessing
 from sklearn.preprocessing import OneHotEncoder
+from sklearn.feature_extraction import DictVectorizer
 from sklearn.preprocessing import Imputer
 from sklearn.base import BaseEstimator
 from sklearn.base import TransformerMixin
@@ -90,7 +91,7 @@ class DataSpliterTrans(BaseEstimator, TransformerMixin):
         print('DataSpliterTrans transform done.')
         return X_
 
-class debugger(BaseEstimator, TransformerMixin):
+class Debugger(BaseEstimator, TransformerMixin):
     def __init__(self):
         pass
 
@@ -102,7 +103,7 @@ class debugger(BaseEstimator, TransformerMixin):
     def transform(self, X, **transform_params):
         return X
 
-def mypipeline(Classifier):
+def PipelineBNP(Classifier):
     pipeline = make_pipeline(
         NullToNaNTrans(),
         make_union(
@@ -128,6 +129,17 @@ def mypipeline(Classifier):
     return pipeline
 
 
+def PipelineTelstra(Classifier):
+    pipeline = make_pipeline(
+        NullToNaNTrans(),
+        make_pipeline(
+            DictVectorizer()
+        ),
+        Classifier()
+        )
+    print('pipeline done.')
+    return pipeline
+
 
 # Simple functions
 
@@ -140,6 +152,17 @@ def objtocat_strtobin_trans(df):
         df[cols[i]] = df[cols[i]].cat.codes
     return df
 
+def unique_column(df,colname):
+    nouni = len(df[colname])
+    uni = len(df[colname].unique())
+    if nouni == uni:
+        return True
+    else:
+        return False
+
+def debugger(x):
+    from IPython.core.debugger import Tracer
+    return Tracer()()
 
 def ifNaN(df):
     n = df.isnull().sum().sum()
