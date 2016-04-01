@@ -72,21 +72,29 @@ class ObjtoCatStrtoIntTrans(BaseEstimator, TransformerMixin):
 
 
 class DataSpliterTrans(BaseEstimator, TransformerMixin):
-    def __init__(self, data=np.int, columns=None):
+    def __init__(self, data=None, columns=None, transp=False):
         self.dtype = data
         self.cols = columns
+        self.transp = transp
 
     def fit(self, X, y=None, **fit_params):
         # select data by datatype (np.int, np.float64, np.object)
-        if self.dtype != 'np.int':
+        if self.dtype != None:
             self.cols = X.loc[:, X.dtypes == self.dtype].columns
+        print(self.cols)
         print('DataSpliterTrans fit done.')
         return self
 
     def transform(self, X, **transform_params):
-        X_ = [X[i] for i in self.cols]
+        print('one')
+        #X_ = [X[i] for i in self.cols]
+        X_ = X[self.cols]
+        print('two')
         X_ = DataFrame(X_)
-        X_ = X_.transpose()
+        print('three')
+        if self.transp == True:
+            X_ = X_.transpose()
+        print(X_)
         print(X_.shape)
         print('DataSpliterTrans transform done.')
         return X_
@@ -131,15 +139,32 @@ def PipelineBNP(Classifier):
 
 def PipelineTelstra(Classifier):
     pipeline = make_pipeline(
-        NullToNaNTrans(),
-        make_pipeline(
-            DictVectorizer()
+        make_union(
+            make_pipeline(
+                DataSpliterTrans(columns='event_type'),
+                DictVectorizer()
+            ),
+            make_pipeline(
+                DataSpliterTrans(columns='severity_type'),
+                DictVectorizer()
+            ),
+            make_pipeline(
+                DataSpliterTrans(columns='resource_type'),
+                DictVectorizer()
+            ),
+            make_pipeline(
+                DataSpliterTrans(columns='volume'),
+                DictVectorizer()
+            ),
+            make_pipeline(
+                DataSpliterTrans(columns='log_feature'),
+                DictVectorizer()
+            ),
         ),
         Classifier()
         )
     print('pipeline done.')
     return pipeline
-
 
 # Simple functions
 
