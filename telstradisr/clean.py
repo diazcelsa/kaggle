@@ -72,30 +72,29 @@ class ObjtoCatStrtoIntTrans(BaseEstimator, TransformerMixin):
 
 
 class DataSpliterTrans(BaseEstimator, TransformerMixin):
-    def __init__(self, data=None, columns=None, transp=False):
+    def __init__(self, data=None, columns=None, transp=False, matrix=False):
         self.dtype = data
         self.cols = columns
         self.transp = transp
+        self.matrix = matrix
 
     def fit(self, X, y=None, **fit_params):
         # select data by datatype (np.int, np.float64, np.object)
         if self.dtype != None:
             self.cols = X.loc[:, X.dtypes == self.dtype].columns
-        print(self.cols)
         print('DataSpliterTrans fit done.')
         return self
 
     def transform(self, X, **transform_params):
-        print('one')
-        #X_ = [X[i] for i in self.cols]
-        X_ = X[self.cols]
-        print('two')
-        X_ = DataFrame(X_)
-        print('three')
+        if len([self.cols]) > 1:
+            X_ = [X[i] for i in self.cols]
+        elif len([self.cols]) == 1:
+            X_ = X[self.cols]
         if self.transp == True:
+            X_ = DataFrame(X_)
             X_ = X_.transpose()
-        print(X_)
-        print(X_.shape)
+        if self.matrix == True:
+            X_ = X_.as_matrix()
         print('DataSpliterTrans transform done.')
         return X_
 
@@ -141,23 +140,23 @@ def PipelineTelstra(Classifier):
     pipeline = make_pipeline(
         make_union(
             make_pipeline(
-                DataSpliterTrans(columns='event_type'),
+                DataSpliterTrans(columns='event_type',matrix=True),
+                DictVectorizer(),
+            ),
+            make_pipeline(
+                DataSpliterTrans(columns='severity_type',matrix=True),
                 DictVectorizer()
             ),
             make_pipeline(
-                DataSpliterTrans(columns='severity_type'),
+                DataSpliterTrans(columns='resource_type',matrix=True),
                 DictVectorizer()
             ),
             make_pipeline(
-                DataSpliterTrans(columns='resource_type'),
+                DataSpliterTrans(columns='volume',matrix=True),
                 DictVectorizer()
             ),
             make_pipeline(
-                DataSpliterTrans(columns='volume'),
-                DictVectorizer()
-            ),
-            make_pipeline(
-                DataSpliterTrans(columns='log_feature'),
+                DataSpliterTrans(columns='log_feature',matrix=True),
                 DictVectorizer()
             ),
         ),
