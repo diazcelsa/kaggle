@@ -72,22 +72,29 @@ class ObjtoCatStrtoIntTrans(BaseEstimator, TransformerMixin):
 
 
 class DataSpliterTrans(BaseEstimator, TransformerMixin):
-    def __init__(self, data=False, columns=None):
+    def __init__(self, data=None, columns=None, transp=False, matrix=False):
         self.dtype = data
         self.cols = columns
+        self.transp = transp
+        self.matrix = matrix
 
     def fit(self, X, y=None, **fit_params):
         # select data by datatype (np.int, np.float64, np.object)
-        if self.dtype != False:
+        if self.dtype != None:
             self.cols = X.loc[:, X.dtypes == self.dtype].columns
         print('DataSpliterTrans fit done.')
         return self
 
     def transform(self, X, **transform_params):
-        X_ = [X[i] for i in self.cols]
-        X_ = DataFrame(X_)
-        X_ = X_.transpose()
-        print(X_.shape)
+        if len([self.cols]) > 1:
+            X_ = [X[i] for i in self.cols]
+        elif len([self.cols]) == 1:
+            X_ = X[self.cols]
+        if self.transp == True:
+            X_ = DataFrame(X_)
+            X_ = X_.transpose()
+        if self.matrix == True:
+            X_ = X_.as_matrix()
         print('DataSpliterTrans transform done.')
         return X_
 
@@ -108,19 +115,19 @@ def PipelineBNP(Classifier):
         NullToNaNTrans(),
         make_union(
             make_pipeline(
-                DataSpliterTrans(data=np.float64),
+                DataSpliterTrans(data=np.float64, transp=True),
                 Imputer(strategy='median')
             ),
             make_pipeline(
-                DataSpliterTrans(data=np.int),
+                DataSpliterTrans(data=np.int, transp=True),
                 Imputer(strategy='most_frequent'),
-                preprocessing.OneHotEncoder(handle_unknown='ignore')
+                preprocessing.OneHotEncoder()
             ),
             make_pipeline(
-                DataSpliterTrans(data=np.object),
+                DataSpliterTrans(data=np.object, transp=True),
                 ObjtoCatStrtoIntTrans(),
                 Imputer(strategy='most_frequent'),
-                preprocessing.OneHotEncoder(handle_unknown='ignore')
+                preprocessing.OneHotEncoder()
             ),
         ),
         Classifier()
@@ -131,15 +138,32 @@ def PipelineBNP(Classifier):
 
 def PipelineTelstra(Classifier):
     pipeline = make_pipeline(
-        NullToNaNTrans(),
-        make_pipeline(
-            DictVectorizer()
+        make_union(
+            make_pipeline(
+                DataSpliterTrans(columns='event_type',matrix=True),
+                DictVectorizer(),
+            ),
+            make_pipeline(
+                DataSpliterTrans(columns='severity_type',matrix=True),
+                DictVectorizer()
+            ),
+            make_pipeline(
+                DataSpliterTrans(columns='resource_type',matrix=True),
+                DictVectorizer()
+            ),
+            make_pipeline(
+                DataSpliterTrans(columns='volume',matrix=True),
+                DictVectorizer()
+            ),
+            make_pipeline(
+                DataSpliterTrans(columns='log_feature',matrix=True),
+                DictVectorizer()
+            ),
         ),
         Classifier()
         )
     print('pipeline done.')
     return pipeline
-
 
 # Simple functions
 
