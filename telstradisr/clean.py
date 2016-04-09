@@ -72,20 +72,24 @@ class ObjtoCatStrtoIntTrans(BaseEstimator, TransformerMixin):
 
 
 class DataSpliterTrans(BaseEstimator, TransformerMixin):
-    def __init__(self, data=None, columns=None, transp=False, matrix=False):
+    def __init__(self, data=None, cols=None, transp=False, matrix=False):
         self.dtype = data
-        self.cols = columns
+        self.cols = cols
         self.transp = transp
         self.matrix = matrix
+        print("init",self.cols)
 
     def fit(self, X, y=None, **fit_params):
         # select data by datatype (np.int, np.float64, np.object)
+        print("fit before",self.cols)
         if self.dtype != None:
             self.cols = X.loc[:, X.dtypes == self.dtype].columns
         print('DataSpliterTrans fit done.')
+        print("fit after",self.cols)
         return self
 
     def transform(self, X, **transform_params):
+        print("columns: ",self.cols)
         if len([self.cols]) > 1:
             X_ = [X[i] for i in self.cols]
         elif len([self.cols]) == 1:
@@ -115,16 +119,16 @@ def PipelineBNP(Classifier):
         NullToNaNTrans(),
         make_union(
             make_pipeline(
-                DataSpliterTrans(data=np.float64),
+                DataSpliterTrans(data=np.float64,transp=True),
                 Imputer(strategy='median')
             ),
             make_pipeline(
-                DataSpliterTrans(data=np.int),
+                DataSpliterTrans(data=np.int,transp=True),
                 Imputer(strategy='most_frequent'),
                 preprocessing.OneHotEncoder()
             ),
             make_pipeline(
-                DataSpliterTrans(data=np.object),
+                DataSpliterTrans(data=np.object,transp=True),
                 ObjtoCatStrtoIntTrans(),
                 Imputer(strategy='most_frequent'),
                 preprocessing.OneHotEncoder()
@@ -140,25 +144,25 @@ def PipelineTelstra(Classifier):
     pipeline = make_pipeline(
         make_union(
             make_pipeline(
-                DataSpliterTrans(columns='event_type',matrix=True),
-                DictVectorizer(),
-            ),
-            make_pipeline(
-                DataSpliterTrans(columns='severity_type',matrix=True),
+                DataSpliterTrans(cols='event_type',matrix=True),
                 DictVectorizer()
             ),
             make_pipeline(
-                DataSpliterTrans(columns='resource_type',matrix=True),
+                DataSpliterTrans(cols='severity_type',matrix=True),
                 DictVectorizer()
             ),
             make_pipeline(
-                DataSpliterTrans(columns='volume',matrix=True),
+                DataSpliterTrans(cols='resource_type',matrix=True),
                 DictVectorizer()
             ),
             make_pipeline(
-                DataSpliterTrans(columns='log_feature',matrix=True),
+                DataSpliterTrans(cols='volume',matrix=True),
                 DictVectorizer()
             ),
+            make_pipeline(
+                DataSpliterTrans(cols='log_feature',matrix=True),
+                DictVectorizer()
+            )
         ),
         Classifier()
         )
