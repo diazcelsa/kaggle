@@ -185,7 +185,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 9,
    "metadata": {
     "collapsed": true
    },
@@ -200,12 +200,39 @@
     "               'randomforestclassifier__min_samples_leaf':[10], \n",
     "               'randomforestclassifier__min_weight_fraction_leaf':[0.0],\n",
     "               'randomforestclassifier__n_jobs':[1]\n",
+    "}\n",
+    "param_grid_2 =  {'randomforestclassifier__max_depth': [4,8],\n",
+    "               'randomforestclassifier__criterion': ['gini'], \n",
+    "               'randomforestclassifier__n_estimators':[5], \n",
+    "               'randomforestclassifier__max_leaf_nodes':[None], \n",
+    "               'randomforestclassifier__min_samples_split':[2],\n",
+    "               'randomforestclassifier__min_samples_leaf':[1,10], \n",
+    "               'randomforestclassifier__min_weight_fraction_leaf':[0.0],\n",
+    "               'randomforestclassifier__n_jobs':[1]\n",
+    "}\n",
+    "param_grid_3 =  {'randomforestclassifier__max_depth': [8],\n",
+    "               'randomforestclassifier__criterion': ['gini'], \n",
+    "               'randomforestclassifier__n_estimators':[10,100], \n",
+    "               'randomforestclassifier__max_leaf_nodes':[None], \n",
+    "               'randomforestclassifier__min_samples_split':[2],\n",
+    "               'randomforestclassifier__min_samples_leaf':[1], \n",
+    "               'randomforestclassifier__min_weight_fraction_leaf':[0.0],\n",
+    "               'randomforestclassifier__n_jobs':[1]\n",
+    "}\n",
+    "param_grid_4 =  {'randomforestclassifier__max_depth': [8],\n",
+    "               'randomforestclassifier__criterion': ['gini'], \n",
+    "               'randomforestclassifier__n_estimators':[5,30], \n",
+    "               'randomforestclassifier__max_leaf_nodes':[None], \n",
+    "               'randomforestclassifier__min_samples_split':[2],\n",
+    "               'randomforestclassifier__min_samples_leaf':[1,4], \n",
+    "               'randomforestclassifier__min_weight_fraction_leaf':[0.0],\n",
+    "               'randomforestclassifier__n_jobs':[1]\n",
     "}"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 10,
    "metadata": {
     "collapsed": false
    },
@@ -316,6 +343,16 @@
       "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
       "  args, varargs, kw, default = inspect.getargspec(init)\n",
       "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
       "  args, varargs, kw, default = inspect.getargspec(init)\n"
      ]
     },
@@ -374,160 +411,6 @@
       "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
       "  args, varargs, kw, default = inspect.getargspec(init)\n",
       "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
       "  args, varargs, kw, default = inspect.getargspec(init)\n"
      ]
     },
@@ -551,7 +434,21 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "fit after event_type\n",
+      "fit after event_type\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
       "columns:  event_type\n"
      ]
     },
@@ -560,6 +457,150 @@
      "output_type": "stream",
      "text": [
       "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
       "  args, varargs, kw, default = inspect.getargspec(init)\n"
      ]
     },
@@ -581,20 +622,7 @@
       "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
       "  args, varargs, kw, default = inspect.getargspec(init)\n",
       "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "fit before severity_type\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
       "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
       "  args, varargs, kw, default = inspect.getargspec(init)\n"
      ]
@@ -603,85 +631,44 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "DataSpliterTrans fit done.\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
+      "fit before severity_type\n",
+      "DataSpliterTrans fit done.\n",
       "fit after severity_type\n",
+      "fit before event_type\n",
       "columns:  severity_type\n",
+      "DataSpliterTrans fit done.\n",
+      "DataSpliterTrans transform done.\n",
+      "fit after event_type\n",
+      "columns:  event_type\n",
       "DataSpliterTrans transform done.\n",
       "fit before resource_type\n",
-      "fit before event_type\n",
       "DataSpliterTrans fit done.\n",
-      "DataSpliterTrans fit done.\n",
-      "fit after event_type\n",
       "fit after resource_type\n",
-      "columns:  event_type\n",
       "columns:  resource_type\n",
+      "fit before severity_type\n",
+      "DataSpliterTrans fit done.\n",
       "DataSpliterTrans transform done.\n",
+      "fit after severity_type\n",
+      "columns:  severity_type\n",
       "DataSpliterTrans transform done.\n",
       "fit before volume\n",
       "DataSpliterTrans fit done.\n",
       "fit after volume\n",
-      "fit before severity_type\n",
       "columns:  volume\n",
-      "DataSpliterTrans fit done.\n",
       "DataSpliterTrans transform done.\n",
-      "fit after severity_type\n",
-      "columns:  severity_type\n",
-      "DataSpliterTrans transform done.\n",
-      "fit before log_feature\n",
       "fit before resource_type\n",
       "DataSpliterTrans fit done.\n",
-      "DataSpliterTrans fit done.\n",
-      "fit after log_feature\n",
       "fit after resource_type\n",
-      "columns:  log_feature\n",
       "columns:  resource_type\n",
       "DataSpliterTrans transform done.\n",
+      "fit before log_feature\n",
+      "DataSpliterTrans fit done.\n",
+      "fit after log_feature\n",
+      "columns:  log_feature\n",
       "DataSpliterTrans transform done.\n",
       "fit before volume\n",
-      "DataSpliterTrans fit done.\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "fit after volume\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
+      "DataSpliterTrans fit done.\n",
+      "fit after volume\n",
       "columns:  volume\n",
       "DataSpliterTrans transform done.\n"
      ]
@@ -690,6 +677,10 @@
      "name": "stderr",
      "output_type": "stream",
      "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
       "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
       "  args, varargs, kw, default = inspect.getargspec(init)\n",
       "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
@@ -721,21 +712,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "DataSpliterTrans fit done.\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
+      "DataSpliterTrans fit done.\n",
       "fit after log_feature\n"
      ]
     },
@@ -790,112 +767,6 @@
       "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
       "  args, varargs, kw, default = inspect.getargspec(init)\n",
       "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "columns:  event_type\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "DataSpliterTrans transform done.\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "columns:  severity_type\n",
-      "DataSpliterTrans transform done.\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "columns:  resource_type\n",
-      "DataSpliterTrans transform done.\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "columns:  volume\n",
-      "DataSpliterTrans transform done.\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
       "  args, varargs, kw, default = inspect.getargspec(init)\n",
       "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
       "  args, varargs, kw, default = inspect.getargspec(init)\n"
@@ -906,16 +777,6 @@
      "output_type": "stream",
      "text": [
       "columns:  event_type\n",
-      "DataSpliterTrans transform done.\n",
-      "columns:  severity_type\n",
-      "columns:  log_feature\n",
-      "DataSpliterTrans transform done.\n",
-      "DataSpliterTrans transform done.\n",
-      "columns:  resource_type\n",
-      "DataSpliterTrans transform done.\n",
-      "columns:  volume\n",
-      "DataSpliterTrans transform done.\n",
-      "columns:  log_feature\n",
       "DataSpliterTrans transform done.\n"
      ]
     },
@@ -932,34 +793,6 @@
       "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
       "  args, varargs, kw, default = inspect.getargspec(init)\n",
       "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
       "  args, varargs, kw, default = inspect.getargspec(init)\n"
      ]
     },
@@ -967,218 +800,6 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "fit before event_type\n",
-      "DataSpliterTrans fit done.\n",
-      "fit after event_type\n",
-      "columns:  event_type\n",
-      "DataSpliterTrans transform done.\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "fit before severity_type\n",
-      "DataSpliterTrans fit done.\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "init event_type\n",
-      "init severity_type\n",
-      "init resource_type\n",
-      "init volume\n",
-      "init log_feature\n",
-      "init event_type\n",
-      "init severity_type\n",
-      "init resource_type\n",
-      "init volume\n",
-      "init log_feature\n",
-      "fit after severity_type\n",
       "columns:  severity_type\n"
      ]
     },
@@ -1187,6 +808,8 @@
      "output_type": "stream",
      "text": [
       "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
       "  args, varargs, kw, default = inspect.getargspec(init)\n"
      ]
     },
@@ -1210,6 +833,14 @@
       "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
       "  args, varargs, kw, default = inspect.getargspec(init)\n",
       "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
       "  args, varargs, kw, default = inspect.getargspec(init)\n"
      ]
     },
@@ -1217,1159 +848,41 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "fit before event_type\n",
-      "fit before resource_type\n",
-      "DataSpliterTrans fit done.\n",
-      "DataSpliterTrans fit done.\n",
-      "fit after event_type\n",
-      "fit after resource_type\n",
-      "columns:  event_type\n",
       "columns:  resource_type\n",
-      "DataSpliterTrans transform done.\n",
-      "DataSpliterTrans transform done.\n",
-      "fit before volume\n",
-      "DataSpliterTrans fit done.\n",
-      "fit after volume\n",
-      "fit before severity_type\n",
+      "DataSpliterTrans transform done.\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
       "columns:  volume\n",
       "DataSpliterTrans transform done.\n",
-      "DataSpliterTrans fit done.\n",
-      "fit after severity_type\n",
-      "columns:  severity_type\n",
-      "DataSpliterTrans transform done.\n",
-      "fit before resource_type\n",
-      "fit before log_feature\n",
-      "DataSpliterTrans fit done.\n",
-      "DataSpliterTrans fit done.\n",
-      "fit after log_feature\n",
-      "fit after resource_type\n",
-      "columns:  log_feature\n",
-      "columns:  resource_type\n",
-      "DataSpliterTrans transform done.\n",
-      "DataSpliterTrans transform done.\n",
-      "fit before volume\n",
-      "DataSpliterTrans fit done.\n",
-      "fit after volume\n",
-      "columns:  volume\n",
-      "DataSpliterTrans transform done.\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "fit before log_feature\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "DataSpliterTrans fit done.\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "fit after log_feature\n",
-      "columns:  log_feature\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "DataSpliterTrans transform done.\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "columns:  event_type\n",
-      "DataSpliterTrans transform done.\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "columns:  severity_type\n",
-      "DataSpliterTrans transform done.\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "columns:  resource_type\n",
-      "DataSpliterTrans transform done.\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "columns:  volume\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "DataSpliterTrans transform done.\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "columns:  log_feature\n",
-      "DataSpliterTrans transform done.\n",
       "columns:  event_type\n",
       "DataSpliterTrans transform done.\n",
-      "columns:  severity_type\n",
-      "DataSpliterTrans transform done.\n",
-      "columns:  resource_type\n",
-      "DataSpliterTrans transform done.\n",
-      "columns:  volume\n",
-      "DataSpliterTrans transform done.\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "columns:  log_feature\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "DataSpliterTrans transform done.\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "fit before event_type\n",
-      "DataSpliterTrans transform done.\n",
-      "DataSpliterTrans fit done.\n",
-      "fit after event_type\n",
-      "columns:  event_type\n",
-      "fit before severity_type\n",
-      "DataSpliterTrans fit done.\n",
-      "fit after severity_type\n",
-      "columns:  severity_type\n",
-      "DataSpliterTrans transform done.\n",
-      "fit before resource_type\n",
-      "DataSpliterTrans fit done.\n",
-      "fit after resource_type\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "columns:  resource_type\n",
-      "init event_type\n",
-      "init severity_type\n",
-      "init resource_type\n",
-      "init volume\n",
-      "init log_feature\n",
-      "init event_type\n",
-      "init severity_type\n",
-      "init resource_type\n",
-      "init volume\n",
-      "init log_feature\n",
-      "DataSpliterTrans transform done.\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "fit before volume\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "DataSpliterTrans fit done.\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "fit after volume\n",
-      "columns:  volume\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "DataSpliterTrans transform done.\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "fit before event_type\n",
-      "DataSpliterTrans fit done.\n",
-      "fit after event_type\n",
-      "fit before log_feature\n",
-      "columns:  event_type\n",
-      "DataSpliterTrans fit done.\n",
-      "fit after log_feature\n",
-      "DataSpliterTrans transform done.\n",
-      "columns:  log_feature\n",
-      "DataSpliterTrans transform done.\n",
-      "fit before severity_type\n",
-      "DataSpliterTrans fit done.\n",
-      "fit after severity_type\n",
-      "columns:  severity_type\n",
-      "DataSpliterTrans transform done.\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "fit before resource_type\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "DataSpliterTrans fit done.\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "fit after resource_type\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "columns:  resource_type\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "DataSpliterTrans transform done.\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "fit before volume\n",
-      "DataSpliterTrans fit done.\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "fit after volume\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "columns:  volume\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "DataSpliterTrans transform done.\n",
-      "columns:  event_type\n",
-      "DataSpliterTrans transform done.\n",
-      "fit before log_feature\n",
-      "DataSpliterTrans fit done.\n",
-      "fit after log_feature\n",
       "columns:  log_feature\n",
       "DataSpliterTrans transform done.\n",
       "columns:  severity_type\n",
       "DataSpliterTrans transform done.\n",
       "columns:  resource_type\n",
-      "DataSpliterTrans transform done.\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "columns:  volume\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "DataSpliterTrans transform done.\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "columns:  log_feature\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "DataSpliterTrans transform done.\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "columns:  event_type\n",
-      "DataSpliterTrans transform done.\n",
-      "columns:  severity_type\n",
       "DataSpliterTrans transform done.\n",
       "DataSpliterTrans transform done.\n",
-      "columns:  resource_type\n",
       "columns:  volume\n",
+      "columns:  log_feature\n",
       "DataSpliterTrans transform done.\n"
      ]
     },
@@ -2386,35 +899,9 @@
       "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
       "  args, varargs, kw, default = inspect.getargspec(init)\n",
       "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "columns:  log_feature\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
       "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "DataSpliterTrans transform done.\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
       "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
       "  args, varargs, kw, default = inspect.getargspec(init)\n",
       "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
@@ -2495,21 +982,6 @@
      "output_type": "stream",
      "text": [
       "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "columns:  resource_type\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
       "  args, varargs, kw, default = inspect.getargspec(init)\n",
       "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
       "  args, varargs, kw, default = inspect.getargspec(init)\n"
@@ -2519,6 +991,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
+      "columns:  resource_type\n",
       "DataSpliterTrans transform done.\n"
      ]
     },
@@ -2526,24 +999,6 @@
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
       "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
       "  args, varargs, kw, default = inspect.getargspec(init)\n",
       "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
@@ -2713,6 +1168,24 @@
      "output_type": "stream",
      "text": [
       "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
       "  args, varargs, kw, default = inspect.getargspec(init)\n"
      ]
     },
@@ -2735,147 +1208,6 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "DataSpliterTrans fit done.\n",
-      "fit after volume\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "columns:  volume\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "DataSpliterTrans transform done.\n",
-      "fit before event_type\n",
-      "DataSpliterTrans fit done.\n",
-      "fit after event_type\n",
-      "columns:  event_type\n",
-      "DataSpliterTrans transform done.\n",
-      "fit before log_feature\n",
-      "DataSpliterTrans fit done.\n",
-      "fit after log_feature\n",
-      "columns:  log_feature\n",
-      "DataSpliterTrans transform done.\n",
-      "fit before severity_type\n",
-      "DataSpliterTrans fit done.\n",
-      "fit after severity_type\n",
-      "columns:  severity_type\n",
-      "DataSpliterTrans transform done.\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "fit before resource_type\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "DataSpliterTrans fit done.\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "fit after resource_type\n",
-      "columns:  resource_type\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "DataSpliterTrans transform done.\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "fit before volume\n",
       "DataSpliterTrans fit done.\n"
      ]
     },
@@ -2914,6 +1246,103 @@
      "name": "stderr",
      "output_type": "stream",
      "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "fit before event_type\n",
+      "DataSpliterTrans fit done.\n",
+      "fit after event_type\n",
+      "columns:  event_type\n",
+      "DataSpliterTrans transform done.\n",
+      "fit before severity_type\n",
+      "fit before log_feature\n",
+      "DataSpliterTrans fit done.\n",
+      "DataSpliterTrans fit done.\n",
+      "fit after log_feature\n",
+      "fit after severity_type\n",
+      "columns:  severity_type\n",
+      "columns:  log_feature\n",
+      "DataSpliterTrans transform done.\n",
+      "DataSpliterTrans transform done.\n",
+      "fit before resource_type\n",
+      "DataSpliterTrans fit done.\n",
+      "fit after resource_type\n",
+      "columns:  resource_type\n",
+      "DataSpliterTrans transform done.\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "fit before volume\n",
+      "DataSpliterTrans fit done.\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "fit after volume\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "columns:  volume\n",
+      "DataSpliterTrans transform done.\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
       "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
       "  args, varargs, kw, default = inspect.getargspec(init)\n",
       "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
@@ -3009,8 +1438,6 @@
      "output_type": "stream",
      "text": [
       "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
-      "  args, varargs, kw, default = inspect.getargspec(init)\n",
-      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
       "  args, varargs, kw, default = inspect.getargspec(init)\n"
      ]
     },
@@ -3200,6 +1627,184 @@
       "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
       "  args, varargs, kw, default = inspect.getargspec(init)\n",
       "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
       "  args, varargs, kw, default = inspect.getargspec(init)\n"
      ]
     },
@@ -3207,6 +1812,1007 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
+      "columns:  event_type\n",
+      "DataSpliterTrans transform done.\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "columns:  severity_type\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "DataSpliterTrans transform done.\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "columns:  resource_type\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "DataSpliterTrans transform done.\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "columns:  volume\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "DataSpliterTrans transform done.\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "columns:  log_feature\n",
+      "DataSpliterTrans transform done.\n",
+      "columns:  event_type\n",
+      "DataSpliterTrans transform done.\n",
+      "columns:  severity_type\n",
+      "DataSpliterTrans transform done.\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "columns:  resource_type\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "DataSpliterTrans transform done.\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "columns:  volume\n",
+      "DataSpliterTrans transform done.\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "fit before event_type\n",
+      "DataSpliterTrans fit done.\n",
+      "fit after event_type\n",
+      "columns:  event_type\n",
+      "DataSpliterTrans transform done.\n",
+      "columns:  log_feature\n",
+      "DataSpliterTrans transform done.\n",
+      "fit before severity_type\n",
+      "DataSpliterTrans fit done.\n",
+      "fit after severity_type\n",
+      "columns:  severity_type\n",
+      "DataSpliterTrans transform done.\n",
+      "fit before resource_type\n",
+      "DataSpliterTrans fit done.\n",
+      "fit after resource_type\n",
+      "columns:  resource_type\n",
+      "DataSpliterTrans transform done.\n",
+      "fit before volume\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "init event_type\n",
+      "init severity_type\n",
+      "init resource_type\n",
+      "init volume\n",
+      "init log_feature\n",
+      "init event_type\n",
+      "init severity_type\n",
+      "init resource_type\n",
+      "init volume\n",
+      "init log_feature\n",
+      "DataSpliterTrans transform done.\n",
+      "DataSpliterTrans fit done.\n",
+      "fit after volume\n",
+      "columns:  volume\n",
+      "fit before log_feature\n",
+      "DataSpliterTrans fit done.\n",
+      "fit after log_feature\n",
+      "columns:  log_feature\n",
+      "DataSpliterTrans transform done.\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "fit before event_type\n",
+      "DataSpliterTrans fit done.\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "fit after event_type\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "columns:  event_type\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "DataSpliterTrans transform done.\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "columns:  event_type\n",
+      "DataSpliterTrans transform done.\n",
+      "fit before severity_type\n",
+      "DataSpliterTrans fit done.\n",
+      "fit after severity_type\n",
+      "columns:  severity_type\n",
+      "DataSpliterTrans transform done.\n",
+      "columns:  severity_type\n",
+      "DataSpliterTrans transform done.\n",
+      "fit before resource_type\n",
+      "DataSpliterTrans fit done.\n",
+      "columns:  resource_type\n",
+      "fit after resource_type\n",
+      "DataSpliterTrans transform done.\n",
+      "columns:  resource_type\n",
+      "DataSpliterTrans transform done.\n",
+      "columns:  volume\n",
+      "DataSpliterTrans transform done.\n",
+      "fit before volume\n",
+      "DataSpliterTrans fit done.\n",
+      "fit after volume\n",
+      "columns:  volume\n",
+      "DataSpliterTrans transform done.\n",
+      "columns:  log_feature\n",
+      "DataSpliterTrans transform done.\n",
+      "fit before log_feature\n",
+      "DataSpliterTrans fit done.\n",
+      "fit after log_feature\n",
+      "columns:  log_feature\n",
+      "DataSpliterTrans transform done.\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "columns:  event_type\n",
+      "DataSpliterTrans transform done.\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "columns:  severity_type\n",
+      "DataSpliterTrans transform done.\n",
+      "fit before event_type\n",
+      "DataSpliterTrans fit done.\n",
+      "fit after event_type\n",
+      "columns:  event_type\n",
+      "DataSpliterTrans transform done.\n",
+      "columns:  resource_type\n",
+      "DataSpliterTrans transform done.\n",
+      "fit before severity_type\n",
+      "DataSpliterTrans fit done.\n",
+      "fit after severity_type\n",
+      "columns:  severity_type\n",
+      "DataSpliterTrans transform done.\n",
+      "columns:  volume\n",
+      "DataSpliterTrans transform done.\n",
+      "fit before resource_type\n",
+      "DataSpliterTrans fit done.\n",
+      "fit after resource_type\n",
+      "columns:  resource_type\n",
+      "DataSpliterTrans transform done.\n",
+      "fit before volume\n",
+      "DataSpliterTrans fit done.\n",
+      "fit after volume\n",
+      "columns:  volume\n",
+      "DataSpliterTrans transform done.\n",
+      "columns:  log_feature\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "init event_type\n",
+      "init severity_type\n",
+      "init resource_type\n",
+      "init volume\n",
+      "init log_feature\n",
+      "DataSpliterTrans transform done.\n",
+      "fit before log_feature\n",
+      "DataSpliterTrans fit done.\n",
+      "DataSpliterTrans transform done.\n",
+      "fit after log_feature\n",
+      "columns:  log_feature\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "fit before event_type\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "DataSpliterTrans fit done.\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "fit after event_type\n",
       "columns:  event_type\n"
      ]
     },
@@ -3229,6 +2835,545 @@
      "name": "stderr",
      "output_type": "stream",
      "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "fit before severity_type\n",
+      "DataSpliterTrans fit done.\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "fit after severity_type\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "columns:  severity_type\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "DataSpliterTrans transform done.\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "init event_type\n",
+      "init severity_type\n",
+      "init resource_type\n",
+      "init volume\n",
+      "init log_feature\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "fit before resource_type\n",
+      "DataSpliterTrans fit done.\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "fit after resource_type\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "columns:  resource_type\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "DataSpliterTrans transform done.\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "fit before volume\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "DataSpliterTrans fit done.\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "fit after volume\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "columns:  volume\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "DataSpliterTrans transform done.\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "fit before log_feature\n",
+      "DataSpliterTrans fit done.\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "fit after log_feature\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "columns:  log_feature\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "DataSpliterTrans transform done.\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "columns:  event_type\n",
+      "DataSpliterTrans transform done.\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
       "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
       "  args, varargs, kw, default = inspect.getargspec(init)\n",
       "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
@@ -3280,6 +3425,14 @@
       "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
       "  args, varargs, kw, default = inspect.getargspec(init)\n",
       "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
       "  args, varargs, kw, default = inspect.getargspec(init)\n"
      ]
     },
@@ -3287,7 +3440,8 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "columns:  resource_type\n"
+      "columns:  resource_type\n",
+      "DataSpliterTrans transform done.\n"
      ]
     },
     {
@@ -3296,6 +3450,35 @@
      "text": [
       "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
       "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "columns:  volume\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
       "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
       "  args, varargs, kw, default = inspect.getargspec(init)\n"
      ]
@@ -3332,6 +3515,16 @@
       "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
       "  args, varargs, kw, default = inspect.getargspec(init)\n",
       "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
       "  args, varargs, kw, default = inspect.getargspec(init)\n"
      ]
     },
@@ -3339,7 +3532,21 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "columns:  volume\n",
+      "columns:  log_feature\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
       "DataSpliterTrans transform done.\n"
      ]
     },
@@ -3358,6 +3565,88 @@
       "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
       "  args, varargs, kw, default = inspect.getargspec(init)\n",
       "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
       "  args, varargs, kw, default = inspect.getargspec(init)\n"
      ]
     },
@@ -3365,9 +3654,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "columns:  log_feature\n",
       "columns:  event_type\n",
-      "DataSpliterTrans transform done.\n",
       "DataSpliterTrans transform done.\n",
       "columns:  severity_type\n",
       "DataSpliterTrans transform done.\n",
@@ -3407,6 +3694,162 @@
       "fit after log_feature\n",
       "columns:  log_feature\n",
       "DataSpliterTrans transform done.\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n",
+      "/usr/local/lib/python3.5/site-packages/sklearn/base.py:175: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead\n",
+      "  args, varargs, kw, default = inspect.getargspec(init)\n"
      ]
     }
    ],
@@ -3415,13 +3858,13 @@
     "## shape 5904x615\n",
     "call = PipelineTelstra(RandomForestClassifier)\n",
     "# check that the name of the attributes are the same as the parameter's name\n",
-    "gs = grid_search.GridSearchCV(call, param_grid_1, cv=2, n_jobs=2, pre_dispatch='n_jobs') # check scoring function\n",
+    "gs = grid_search.GridSearchCV(call, param_grid_4, cv=2, n_jobs=2, pre_dispatch='n_jobs') # check scoring function\n",
     "gs = gs.fit(x_train,y_train)"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 13,
+   "execution_count": 11,
    "metadata": {
     "collapsed": false
    },
@@ -3429,13 +3872,13 @@
     {
      "data": {
       "text/plain": [
-       "[mean: 0.67818, std: 0.01603, params: {'randomforestclassifier__max_depth': 8, 'randomforestclassifier__min_weight_fraction_leaf': 0.0, 'randomforestclassifier__n_jobs': 1, 'randomforestclassifier__criterion': 'gini', 'randomforestclassifier__max_leaf_nodes': None, 'randomforestclassifier__min_samples_leaf': 10, 'randomforestclassifier__min_samples_split': 2, 'randomforestclassifier__n_estimators': 5},\n",
-       " mean: 0.65837, std: 0.00073, params: {'randomforestclassifier__max_depth': 8, 'randomforestclassifier__min_weight_fraction_leaf': 0.0, 'randomforestclassifier__n_jobs': 1, 'randomforestclassifier__criterion': 'gini', 'randomforestclassifier__max_leaf_nodes': None, 'randomforestclassifier__min_samples_leaf': 10, 'randomforestclassifier__min_samples_split': 2, 'randomforestclassifier__n_estimators': 20},\n",
-       " mean: 0.67209, std: 0.00124, params: {'randomforestclassifier__max_depth': 16, 'randomforestclassifier__min_weight_fraction_leaf': 0.0, 'randomforestclassifier__n_jobs': 1, 'randomforestclassifier__criterion': 'gini', 'randomforestclassifier__max_leaf_nodes': None, 'randomforestclassifier__min_samples_leaf': 10, 'randomforestclassifier__min_samples_split': 2, 'randomforestclassifier__n_estimators': 5},\n",
-       " mean: 0.67649, std: 0.00802, params: {'randomforestclassifier__max_depth': 16, 'randomforestclassifier__min_weight_fraction_leaf': 0.0, 'randomforestclassifier__n_jobs': 1, 'randomforestclassifier__criterion': 'gini', 'randomforestclassifier__max_leaf_nodes': None, 'randomforestclassifier__min_samples_leaf': 10, 'randomforestclassifier__min_samples_split': 2, 'randomforestclassifier__n_estimators': 20}]"
+       "[mean: 0.65650, std: 0.00418, params: {'randomforestclassifier__criterion': 'gini', 'randomforestclassifier__n_jobs': 1, 'randomforestclassifier__n_estimators': 5, 'randomforestclassifier__min_samples_split': 2, 'randomforestclassifier__min_weight_fraction_leaf': 0.0, 'randomforestclassifier__min_samples_leaf': 1, 'randomforestclassifier__max_depth': 8, 'randomforestclassifier__max_leaf_nodes': None},\n",
+       " mean: 0.67818, std: 0.01039, params: {'randomforestclassifier__criterion': 'gini', 'randomforestclassifier__n_jobs': 1, 'randomforestclassifier__n_estimators': 30, 'randomforestclassifier__min_samples_split': 2, 'randomforestclassifier__min_weight_fraction_leaf': 0.0, 'randomforestclassifier__min_samples_leaf': 1, 'randomforestclassifier__max_depth': 8, 'randomforestclassifier__max_leaf_nodes': None},\n",
+       " mean: 0.68005, std: 0.01654, params: {'randomforestclassifier__criterion': 'gini', 'randomforestclassifier__n_jobs': 1, 'randomforestclassifier__n_estimators': 5, 'randomforestclassifier__min_samples_split': 2, 'randomforestclassifier__min_weight_fraction_leaf': 0.0, 'randomforestclassifier__min_samples_leaf': 4, 'randomforestclassifier__max_depth': 8, 'randomforestclassifier__max_leaf_nodes': None},\n",
+       " mean: 0.67293, std: 0.00616, params: {'randomforestclassifier__criterion': 'gini', 'randomforestclassifier__n_jobs': 1, 'randomforestclassifier__n_estimators': 30, 'randomforestclassifier__min_samples_split': 2, 'randomforestclassifier__min_weight_fraction_leaf': 0.0, 'randomforestclassifier__min_samples_leaf': 4, 'randomforestclassifier__max_depth': 8, 'randomforestclassifier__max_leaf_nodes': None}]"
       ]
      },
-     "execution_count": 13,
+     "execution_count": 11,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -3448,7 +3891,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 14,
+   "execution_count": 12,
    "metadata": {
     "collapsed": false
    },
@@ -3458,8 +3901,8 @@
     "meanv = np.zeros(len(sco))\n",
     "deptv = np.zeros(len(sco),dtype=np.int)\n",
     "estiv = np.zeros(len(sco),dtype=np.int)\n",
-    "deptk = [i for i in sco[0].parameters.keys()][0]\n",
-    "estik = [i for i in sco[0].parameters.keys()][7]\n",
+    "deptk = [i for i in sco[0].parameters.keys()][5]\n",
+    "estik = [i for i in sco[0].parameters.keys()][2]\n",
     "\n",
     "l = 0\n",
     "while l < len(sco):\n",
@@ -3467,23 +3910,23 @@
     "    par = sco[l].parameters.values()\n",
     "    values = [v for v in par]\n",
     "    meanv[l] = mean\n",
-    "    estiv[l] = values[7]\n",
-    "    deptv[l] = values[0]\n",
+    "    estiv[l] = values[2]\n",
+    "    deptv[l] = values[5]\n",
     "    l += 1"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 15,
+   "execution_count": 13,
    "metadata": {
     "collapsed": false
    },
    "outputs": [
     {
      "data": {
-      "image/png": "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\n",
+      "image/png": "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\n",
       "text/plain": [
-       "<matplotlib.figure.Figure at 0x116b7f128>"
+       "<matplotlib.figure.Figure at 0x119669160>"
       ]
      },
      "metadata": {},
@@ -3495,10 +3938,10 @@
     "ma = np.matrix([[meanv[0], meanv[1]], [meanv[2], meanv[3]]], dtype=np.float64)\n",
     "scores = pd.DataFrame(ma,columns=np.unique(estiv),index=np.unique(deptv))\n",
     "ax = sns.heatmap(scores)\n",
-    "ax.set_title('parameters evaluation roc_auc 1 depth vs n_estimators')\n",
+    "ax.set_title('parameters evaluation 3 depth vs estimators')\n",
     "ax.set_title\n",
     "fig = ax.get_figure()\n",
-    "fig.savefig(\"par_eval_1_depth8_10_esti20_100.png\")"
+    "fig.savefig(\"par_eval_3_depth8_esti10_100.png\")"
    ]
   },
   {

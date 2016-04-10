@@ -20,7 +20,7 @@ from collections import defaultdict
 
 
 
-class NullToNaNTrans(BaseEstimator, TransformerMixin):
+class NulltoNanTrans(BaseEstimator, TransformerMixin):
     def __init__(self):
         pass
 
@@ -42,11 +42,11 @@ class ObjtoCatStrtoIntTrans(BaseEstimator, TransformerMixin):
         if self.cols == None:
             self.cols = X.columns
         self.mapping = defaultdict(list)
-        X_ = X.copy()
+        X2 = X.copy()
         m = 0
         while m < len(self.cols):
-            X_[self.cols[m]] = X_[self.cols[m]].astype('category')
-            cats = X_[self.cols[m]].dropna().unique()
+            X2[self.cols[m]] = X2[self.cols[m]].astype('category')
+            cats = X2[self.cols[m]].dropna().unique()
             ncat = len(cats)
             d = defaultdict(lambda : np.nan)
             a = 0
@@ -60,21 +60,21 @@ class ObjtoCatStrtoIntTrans(BaseEstimator, TransformerMixin):
         
     def transform(self, X, **transform_params):
         # apply mapping from fit to the data
-        X_ = X.copy()
+        X2 = X.copy()
         m = 0
-        while m < len(self.cols):
-            val = X_[self.cols[m]].isnull()
-            X_.loc[~val,self.cols[m]] = X_.loc[~val,self.cols[m]].map(lambda x: self.mapping[self.cols[m]][x])
+        while m <    len(self.cols):
+            val = X2[self.cols[m]].isnull()
+            X2.loc[~val,self.cols[m]] = X2.loc[~val,self.cols[m]].map(lambda x: self.mapping[self.cols[m]][x])
             m += 1
-        print(X_.shape)
+        print(X2.shape)
         print('ObjtoCatStrtoIntTrans transform done.')
-        return X_
+        return X2
 
 
 class DataSpliterTrans(BaseEstimator, TransformerMixin):
-    def __init__(self, data=None, columns=None, transp=False, matrix=False):
+    def __init__(self, data=None, cols=None, transp=False, matrix=False):
         self.dtype = data
-        self.cols = columns
+        self.cols = cols
         self.transp = transp
         self.matrix = matrix
 
@@ -86,17 +86,18 @@ class DataSpliterTrans(BaseEstimator, TransformerMixin):
         return self
 
     def transform(self, X, **transform_params):
+        print("columns: ",self.cols)
         if len([self.cols]) > 1:
-            X_ = [X[i] for i in self.cols]
+            X2 = [X[i] for i in self.cols]
         elif len([self.cols]) == 1:
-            X_ = X[self.cols]
+            X2 = X[self.cols]
         if self.transp == True:
-            X_ = DataFrame(X_)
-            X_ = X_.transpose()
+            X2 = DataFrame(X2)
+            X2 = X2.transpose()
         if self.matrix == True:
-            X_ = X_.as_matrix()
+            X2 = X2.as_matrix()
         print('DataSpliterTrans transform done.')
-        return X_
+        return X2
 
 class Debugger(BaseEstimator, TransformerMixin):
     def __init__(self):
@@ -115,19 +116,19 @@ def PipelineBNP(Classifier):
         NullToNaNTrans(),
         make_union(
             make_pipeline(
-                DataSpliterTrans(data=np.float64, transp=True),
+                DataSpliterTrans(data=np.float64,transp=True),
                 Imputer(strategy='median')
             ),
             make_pipeline(
-                DataSpliterTrans(data=np.int, transp=True),
+                DataSpliterTrans(data=np.int,transp=True),
                 Imputer(strategy='most_frequent'),
-                preprocessing.OneHotEncoder()
+                preprocessing.OneHotEncoder(handle_unknown='ignore')
             ),
             make_pipeline(
-                DataSpliterTrans(data=np.object, transp=True),
+                DataSpliterTrans(data=np.object,transp=True),
                 ObjtoCatStrtoIntTrans(),
                 Imputer(strategy='most_frequent'),
-                preprocessing.OneHotEncoder()
+                preprocessing.OneHotEncoder(handle_unknown='ignore')
             ),
         ),
         Classifier()
@@ -140,25 +141,25 @@ def PipelineTelstra(Classifier):
     pipeline = make_pipeline(
         make_union(
             make_pipeline(
-                DataSpliterTrans(columns='event_type',matrix=True),
-                DictVectorizer(),
-            ),
-            make_pipeline(
-                DataSpliterTrans(columns='severity_type',matrix=True),
+                DataSpliterTrans(cols='event_type',matrix=True),
                 DictVectorizer()
             ),
             make_pipeline(
-                DataSpliterTrans(columns='resource_type',matrix=True),
+                DataSpliterTrans(cols='severity_type',matrix=True),
                 DictVectorizer()
             ),
             make_pipeline(
-                DataSpliterTrans(columns='volume',matrix=True),
+                DataSpliterTrans(cols='resource_type',matrix=True),
                 DictVectorizer()
             ),
             make_pipeline(
-                DataSpliterTrans(columns='log_feature',matrix=True),
+                DataSpliterTrans(cols='volume',matrix=True),
                 DictVectorizer()
             ),
+            make_pipeline(
+                DataSpliterTrans(cols='log_feature',matrix=True),
+                DictVectorizer()
+            )
         ),
         Classifier()
         )

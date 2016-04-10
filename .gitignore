@@ -1,1 +1,5 @@
-./telstradisr/data/*
+./telstradisr/__pycache__
+./telstradisr/*.png
+./bnp_paribas_cardif/__pycache__
+./bnp_paribas_cardif/*.png
+./bnp_paribas_cardif/par_eval_3_esti10_100.matrix
