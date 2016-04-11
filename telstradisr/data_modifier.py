@@ -88,9 +88,10 @@ class DataSpliterTrans(BaseEstimator, TransformerMixin):
     def transform(self, X, **transform_params):
         #X_ = X.copy()
         if len([self.cols]) > 1:
-            X_ = pd.DataFrame(X, columns=self.cols)
+            X_ = X.loc[:,self.cols] 
         elif len([self.cols]) == 1:
-            X_ = pd.DataFrame(X, columns=self.cols)
+            print(self.cols,X.index)
+            X_ = X.loc[:,self.cols]
         if self.matrix == True:
             X_ = X_.as_matrix()
         print('DataSpliterTrans transform done.')
