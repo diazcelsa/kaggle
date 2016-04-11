@@ -46,3 +46,21 @@ DataSpliterTrans transform done.
 DataSpliterTrans transform done.
 (114393, 19)
 ObjtoCatStrtoIntTrans transform done.
+pipeline done.
+NullToNaNTrans fit done.
+NullToNaNTrans transform done.
+DataSpliterTrans fit done.
+DataSpliterTrans transform done.
+DataSpliterTrans fit done.
+DataSpliterTrans transform done.
+DataSpliterTrans fit done.
+DataSpliterTrans transform done.
+ObjtoCatStrtoIntTrans fit done.
+(114321, 19)
+ObjtoCatStrtoIntTrans transform done.
+NullToNaNTrans transform done.
+DataSpliterTrans transform done.
+DataSpliterTrans transform done.
+DataSpliterTrans transform done.
+(114393, 19)
+ObjtoCatStrtoIntTrans transform done.

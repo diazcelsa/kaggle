@@ -27,20 +27,17 @@ from data_modifier import *
 train = pd.read_csv("../../../github_data/bnp_paribas_cardif_data/train.csv")
 test = pd.read_csv("../../../github_data/bnp_paribas_cardif_data/test.csv")
 
-print(train.shape,test.shape)
-
 ## define variables 
 y_trainf = train.target
 columns = train.columns
 x_trainf = train[columns[2:]]
 y_testf = test[columns[2:]]
-print(y_trainf.shape,x_trainf.shape,y_testf.shape)
 
 ##### generate pipeline 
 ## X.shape (91456, 108)
-parames = {'randomforestclassifier__max_depth': None,
+parames = {'randomforestclassifier__max_depth': 40,
                'randomforestclassifier__criterion': 'gini', 
-                              'randomforestclassifier__n_estimators': 100, 
+                              'randomforestclassifier__n_estimators': 500, 
                                              'randomforestclassifier__max_leaf_nodes': None, 
                                                             'randomforestclassifier__min_samples_split': 2,
                                                                            'randomforestclassifier__min_samples_leaf': 1, 
@@ -55,7 +52,7 @@ call = call.fit(x_trainf,y_trainf)
 y_predict = call.predict_proba(y_testf)
 
 results = pd.DataFrame({'ID':test.ID,'PredictedProb':y_predict[:,1]})
-results.to_csv('results.csv')
+results.to_csv('results.csv',index=False)
 
 
 ##### generate pipeline
