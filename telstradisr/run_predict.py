@@ -95,10 +95,10 @@ x_test = test[columns[3:]]
 ## shape 5904x615
 parames = {'randomforestclassifier__max_depth': 8,
                        'randomforestclassifier__criterion': 'gini', 
-                                      'randomforestclassifier__n_estimators': 10, 
+                                      'randomforestclassifier__n_estimators': 500, 
                                                      'randomforestclassifier__max_leaf_nodes': None, 
                                                                     'randomforestclassifier__min_samples_split': 2,
-                                                                                   'randomforestclassifier__min_samples_leaf': 1, 
+                                                                                   'randomforestclassifier__min_samples_leaf': 4, 
                                                                                                   'randomforestclassifier__min_weight_fraction_leaf': 0.0,
                                                                                                                  'randomforestclassifier__n_jobs': 1
                                                                                                                  }
@@ -109,9 +109,9 @@ call = call.fit(x_train,y_train)
 
 ##### generate y_predict
 y_predict = call.predict(x_test)
-print(y_predict)
+y_predict = pd.get_dummies(y_predict)
 
-results = pd.DataFrame({'id':test.id,'predict_0':y_predict[:,0],'predict_1':y_predict[:,1],'predict_2':y_predict[:,2]})
-results.to_csv('results.csv')
+results = pd.DataFrame({'id':test.id,'predict_0':y_predict[0],'predict_1':y_predict[1],'predict_2':y_predict[2]})
+results.to_csv('results.csv',index=False)
 
 
