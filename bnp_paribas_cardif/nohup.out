@@ -1,0 +1,48 @@
+pipeline done.
+NullToNaNTrans fit done.
+NullToNaNTrans transform done.
+DataSpliterTrans fit done.
+DataSpliterTrans transform done.
+DataSpliterTrans fit done.
+DataSpliterTrans transform done.
+DataSpliterTrans fit done.
+DataSpliterTrans transform done.
+ObjtoCatStrtoIntTrans fit done.
+(91456, 19)
+ObjtoCatStrtoIntTrans transform done.
+NullToNaNTrans transform done.
+DataSpliterTrans transform done.
+DataSpliterTrans transform done.
+DataSpliterTrans transform done.
+(114393, 19)
+ObjtoCatStrtoIntTrans transform done.
+Traceback (most recent call last):
+  File "run_predict.py", line 101, in <module>
+    fpr0, tpr0, thresholds = metrics.roc_curve(y_test,y_predict[:,1])
+  File "/home/celsa/.local/lib/python3.4/site-packages/sklearn/metrics/ranking.py", line 501, in roc_curve
+    y_true, y_score, pos_label=pos_label, sample_weight=sample_weight)
+  File "/home/celsa/.local/lib/python3.4/site-packages/sklearn/metrics/ranking.py", line 294, in _binary_clf_curve
+    check_consistent_length(y_true, y_score)
+  File "/home/celsa/.local/lib/python3.4/site-packages/sklearn/utils/validation.py", line 176, in check_consistent_length
+    "%s" % str(uniques))
+ValueError: Found arrays with inconsistent numbers of samples: [ 22865 114393]
+(114321, 133) (114393, 132)
+(114321,) (114321, 131) (114393, 131)
+pipeline done.
+NullToNaNTrans fit done.
+NullToNaNTrans transform done.
+DataSpliterTrans fit done.
+DataSpliterTrans transform done.
+DataSpliterTrans fit done.
+DataSpliterTrans transform done.
+DataSpliterTrans fit done.
+DataSpliterTrans transform done.
+ObjtoCatStrtoIntTrans fit done.
+(114321, 19)
+ObjtoCatStrtoIntTrans transform done.
+NullToNaNTrans transform done.
+DataSpliterTrans transform done.
+DataSpliterTrans transform done.
+DataSpliterTrans transform done.
+(114393, 19)
+ObjtoCatStrtoIntTrans transform done.
