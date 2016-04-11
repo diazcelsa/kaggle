@@ -90,7 +90,6 @@ class DataSpliterTrans(BaseEstimator, TransformerMixin):
         if len([self.cols]) > 1:
             X_ = X.loc[:,self.cols] 
         elif len([self.cols]) == 1:
-            print(self.cols,X.index)
             X_ = X.loc[:,self.cols]
         if self.matrix == True:
             X_ = X_.as_matrix()
