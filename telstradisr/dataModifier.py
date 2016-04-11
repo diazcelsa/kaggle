@@ -1,5 +1,5 @@
 ################
-################   Clean Data
+################   Structure Data
 ################
 
 import pandas as pd
@@ -42,11 +42,11 @@ class ObjtoCatStrtoIntTrans(BaseEstimator, TransformerMixin):
         if self.cols == None:
             self.cols = X.columns
         self.mapping = defaultdict(list)
-        X2 = X.copy()
+        X_ = X.copy()
         m = 0
         while m < len(self.cols):
-            X2[self.cols[m]] = X2[self.cols[m]].astype('category')
-            cats = X2[self.cols[m]].dropna().unique()
+            X_[self.cols[m]] = X_[self.cols[m]].astype('category')
+            cats = X_[self.cols[m]].dropna().unique()
             ncat = len(cats)
             d = defaultdict(lambda : np.nan)
             a = 0
@@ -60,20 +60,20 @@ class ObjtoCatStrtoIntTrans(BaseEstimator, TransformerMixin):
         
     def transform(self, X, **transform_params):
         # apply mapping from fit to the data
-        X2 = X.copy()
+        X_ = X.copy()
         m = 0
-        while m <    len(self.cols):
-            val = X2[self.cols[m]].isnull()
-            X2.loc[~val,self.cols[m]] = X2.loc[~val,self.cols[m]].map(lambda x: self.mapping[self.cols[m]][x])
+        while m < len(self.cols):
+            val = X_[self.cols[m]].isnull()
+            X_.loc[~val,self.cols[m]] = X_.loc[~val,self.cols[m]].map(lambda x: self.mapping[self.cols[m]][x])
             m += 1
-        print(X2.shape)
+        print(X_.shape)
         print('ObjtoCatStrtoIntTrans transform done.')
-        return X2
+        return X_
 
 
 class DataSpliterTrans(BaseEstimator, TransformerMixin):
-    def __init__(self, data=None, cols=None, transp=False, matrix=False):
-        self.dtype = data
+    def __init__(self, dtype=None, cols=None, transp=False, matrix=False):
+        self.dtype = dtype
         self.cols = cols
         self.transp = transp
         self.matrix = matrix
@@ -86,18 +86,15 @@ class DataSpliterTrans(BaseEstimator, TransformerMixin):
         return self
 
     def transform(self, X, **transform_params):
-        print("columns: ",self.cols)
+        #X_ = X.copy()
         if len([self.cols]) > 1:
-            X2 = [X[i] for i in self.cols]
+            X_ = pd.DataFrame(X, columns=self.cols)
         elif len([self.cols]) == 1:
-            X2 = X[self.cols]
-        if self.transp == True:
-            X2 = DataFrame(X2)
-            X2 = X2.transpose()
+            X_ = pd.DataFrame(X, columns=self.cols)
         if self.matrix == True:
-            X2 = X2.as_matrix()
+            X_ = X_.as_matrix()
         print('DataSpliterTrans transform done.')
-        return X2
+        return X_
 
 class Debugger(BaseEstimator, TransformerMixin):
     def __init__(self):
@@ -113,23 +110,23 @@ class Debugger(BaseEstimator, TransformerMixin):
 
 def PipelineBNP(Classifier):
     pipeline = make_pipeline(
-        NullToNaNTrans(),
+        NulltoNanTrans(),
         make_union(
             make_pipeline(
-                DataSpliterTrans(data=np.float64,transp=True),
+                DataSpliterTrans(dtype=np.float64),
                 Imputer(strategy='median')
             ),
             make_pipeline(
-                DataSpliterTrans(data=np.int,transp=True),
+                DataSpliterTrans(dtype=np.int),
                 Imputer(strategy='most_frequent'),
                 preprocessing.OneHotEncoder(handle_unknown='ignore')
             ),
             make_pipeline(
-                DataSpliterTrans(data=np.object,transp=True),
+                DataSpliterTrans(dtype=np.object),
                 ObjtoCatStrtoIntTrans(),
                 Imputer(strategy='most_frequent'),
                 preprocessing.OneHotEncoder(handle_unknown='ignore')
-            ),
+            )
         ),
         Classifier()
         )
@@ -189,24 +186,14 @@ def debugger(x):
     from IPython.core.debugger import Tracer
     return Tracer()()
 
-def ifNaN(df):
+def if_nan(df):
     n = df.isnull().sum().sum()
     if n == 0:
         return False
     else:
         return True
 
-def matrixToDf(matrix, inidata):
-    if inidata == None:
-        newdf = pd.DataFrame(matrix)
-    else:
-        cols = inidata.columns
-        newdf = pd.DataFrame(matrix)
-        newdf.columns = cols
-    return newdf
-    
-
-def distnormalvsnonnormal(dic, df):
+def distnormal_vs_nonnormal(dic, df):
     cols = df.columns[(df.dtypes == np.float64)]
     for i in range(len(cols)):
         df.update(df[cols[i]].notnull().apply(lambda x: (x - x.mean()) / (x.max() - x.min())).dropna())

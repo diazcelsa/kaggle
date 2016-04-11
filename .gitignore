@@ -3,3 +3,4 @@
 ./bnp_paribas_cardif/__pycache__
 ./bnp_paribas_cardif/*.png
 ./bnp_paribas_cardif/par_eval_3_esti10_100.matrix
+./bnp_paribas_cardif/par_eval_depthnone_esti10.matrix
