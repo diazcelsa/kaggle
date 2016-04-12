@@ -5,3 +5,4 @@ par_eval_depthnone_esti10.matrix
 .ipynb_checkpoints/
 nohup.out
 .DS_Store
+*.pyc

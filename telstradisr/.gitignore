@@ -6,3 +6,4 @@ par_eval_depthnone_esti10.matrix
 nohup.out
 par_eval_3_esti10_100.matrix
 .DS_Store
+*.pyc
