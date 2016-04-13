@@ -21,3 +21,36 @@ event_type.csv - event type related to the main dataset
 log_feature.csv - features extracted from log files
 resource_type.csv - type of resource related to the main dataset
 severity_type.csv -  severity type of a warning message coming from the log
+
+
+The analysis of the data and the prediction of the model is performed in the files and notebooks:
+
+    - check_input_data.ipynb
+        - Explore the format of data given and the format expected for the submission
+        - Explore the different data types in the features
+
+    - data_modifier.py
+        - Classes and Methods to process the datasets
+
+    - clean_group_eval.ipynb
+        - Aggregate data by time (id) and location in each table
+        - Merge tables to collect all the features to learn from
+        - Explore whether or not there are missing values
+        - Explore how to preprocess the data
+        - Explore sklearn classes and methods to process our data
+        - Develope new classes and methods (data_modifier.py) and evaluate them to process data
+        - Develope a protocol for processing data and include it into a pipeline
+        - Generate a train and a test sets out of the initial given train data
+        - Generate a model using processed data with Random Forest classifier and default parameters
+        - Apply 3-fold Cross Validation to train dataset and perform the predictions in each case
+        - Evaluate the models generated with a confussion matrix    
+
+    - gs_score.ipynb
+        - Generate and evaluate predictions through Grid Search
+        - Compare different values for different parameters of Random Forest classifier 
+
+    - run_predict.py
+        - Run final prediction with test data
+
+    - results.csv
+        - Final results
