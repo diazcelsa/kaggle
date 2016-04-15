@@ -138,6 +138,10 @@ def PipelineTelstra(Classifier):
     pipeline = make_pipeline(
         make_union(
             make_pipeline(
+                DataSpliterTrans(cols='location',matrix=True),
+                preprocessing.OneHotEncoder(handle_unknown='ignore')
+            ),
+            make_pipeline(
                 DataSpliterTrans(cols='event_type',matrix=True),
                 DictVectorizer()
             ),
