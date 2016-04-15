@@ -86,11 +86,12 @@ class DataSpliterTrans(BaseEstimator, TransformerMixin):
         return self
 
     def transform(self, X, **transform_params):
-        #X_ = X.copy()
         if len([self.cols]) > 1:
             X_ = X.loc[:,self.cols] 
         elif len([self.cols]) == 1:
             X_ = X.loc[:,self.cols]
+        if self.transp == True:
+            X_ = X_[:, None]
         if self.matrix == True:
             X_ = X_.as_matrix()
         print('DataSpliterTrans transform done.')
@@ -137,6 +138,10 @@ def PipelineBNP(Classifier):
 def PipelineTelstra(Classifier):
     pipeline = make_pipeline(
         make_union(
+            make_pipeline(
+                DataSpliterTrans(cols='location',transp=True),
+                preprocessing.OneHotEncoder(handle_unknown='ignore')
+            ),
             make_pipeline(
                 DataSpliterTrans(cols='event_type',matrix=True),
                 DictVectorizer()
